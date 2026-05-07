@@ -1,0 +1,27 @@
+﻿@model List<SillyCats.Models.Item>
+
+<h1>My Silly Cats Catalog</h1>
+
+<div>
+    <a asp-action="Index">All</a>
+    @foreach (var gen in ViewBag.Names as List<string>)
+    {
+        <span> | </span>
+        <a asp-action="Index" asp-route-Name="@gen">@gen</a>
+    }
+</div>
+
+<hr />
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>
+            <a asp-action="Details" asp-route-id="@item.Id">@item.Name</a>
+            -- @item.Personality (@item.Description)
+        </li>
+    }
+</ul>
+
+<hr />
+<a asp-action="Add">+ Summon a Silly Cat</a>
