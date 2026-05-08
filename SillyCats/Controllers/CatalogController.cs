@@ -14,8 +14,8 @@ public class CatalogController : Controller
             Breed = "Domestic Shorthair",
             Gender = "Neutered Male",
             Personality = "Patient, picky, untrusting",
-            Description =
-                "Mr. Fresh is a famous internet cat. He has risen to fame thanks to a video of him giving the camera a side-eye. He was named Mr. Fresh after his patient yet picky behavior regarding the food he will eat."
+            Description = "Mr. Fresh is a famous internet cat. He has risen to fame thanks to a video of him giving the camera a side-eye. He was named Mr. Fresh after his patient yet picky behavior regarding the food he will eat.",
+            ImageUrl = "/images/creatures/Freshguygif.gif"
         },
         new Item
         {
@@ -25,7 +25,8 @@ public class CatalogController : Controller
             Gender = "Male",
             Personality = "Stupid & an Idiot",
             Description =
-                "He gained notoriety for an incident in which his feeder completely flooded with water. During this time, Stupid Idiot was unable to eat from it. A human tried to offer him 10 hotdogs, as well as some cat food, but Stupid Idiot rejected every one."
+                "He gained notoriety for an incident in which his feeder completely flooded with water. During this time, Stupid Idiot was unable to eat from it. A human tried to offer him 10 hotdogs, as well as some cat food, but Stupid Idiot rejected every one.",
+            ImageUrl = "/images/creatures/Idiot.png"
         }
     };
 

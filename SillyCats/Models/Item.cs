@@ -8,4 +8,5 @@ public class Item
     public string Gender { get; set; }
     public string Personality  { get; set; }
     public string Description { get; set; }
+    public string ImageUrl { get; set; }
 }

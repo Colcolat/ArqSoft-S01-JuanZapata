@@ -28,7 +28,7 @@ else
         @foreach (var item in Model)
         {
             <div class="cat-card">
-                <div style="font-size:2.5rem; line-height:1;">🐱</div>
+                <img src="@item.ImageUrl" alt="Foto de @item.Name" class="cat-image" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" />
                 <h3>@item.Name</h3>
                 <div class="personality-badge">@item.Personality</div>
                 <p class="description-preview">@item.Description</p>
