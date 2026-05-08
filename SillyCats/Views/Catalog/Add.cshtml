@@ -10,7 +10,8 @@
 </div>
 
 <div class="form-panel">
-    <form asp-action="Add" method="post">
+    <form asp-action="Add" method="post" enctype="multipart/form-data">
+        
         <div class="form-group-comic">
             <label asp-for="Name">CAT NAME</label>
             <input asp-for="Name" placeholder="e.g. Lord Fluffington III"/>
@@ -30,6 +31,11 @@
         <div class="form-group-comic">
             <label asp-for="Description">DESCRIPTION / BIO</label>
             <input asp-for="Description" placeholder="Tell us the cat's legendary tale..."/>
+        </div>
+
+        <div class="form-group-comic">
+            <label>CAT IMAGE</label>
+            <input type="file" name="imageFile" accept="image/*" style="padding: 0.5rem; background: #fff; border-radius: 4px;" />
         </div>
 
         <div style="display:flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
