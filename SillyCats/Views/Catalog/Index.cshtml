@@ -1,27 +1,45 @@
 ﻿@model List<SillyCats.Models.Item>
 
-<h1>My Silly Cats Catalog</h1>
+<div class="page-title-wrap">
+    <h1>My Silly Cats Catalog</h1>
+    <span class="burst">MEOW!!</span>
+</div>
 
-<div>
-    <a asp-action="Index">All</a>
-    @foreach (var gen in ViewBag.Names as List<string>)
+<div class="filter-bar">
+    <a asp-action="Index" class="@(ViewBag.CurrentName == null ? "active" : "")">ALL CATS</a>
+    @foreach (var name in ViewBag.Names as List<string>)
     {
-        <span> | </span>
-        <a asp-action="Index" asp-route-Name="@gen">@gen</a>
+        <a asp-action="Index" asp-route-Name="@name"
+           class="@(ViewBag.CurrentName == name ? "active" : "")">@name.ToUpper()</a>
     }
 </div>
 
-<hr />
+@if (!Model.Any())
+{
+    <div class="empty-state">
+        <div style="font-size:4rem">🐱</div>
+        <h2>No cats found!</h2>
+        <p>The catalog is empty... for now.</p>
+    </div>
+}
+else
+{
+    <div class="cat-grid">
+        @foreach (var item in Model)
+        {
+            <div class="cat-card">
+                <div style="font-size:2.5rem; line-height:1;">🐱</div>
+                <h3>@item.Name</h3>
+                <div class="personality-badge">@item.Personality</div>
+                <p class="description-preview">@item.Description</p>
+                <a asp-action="Details" asp-route-id="@item.Id" class="details-link">READ MORE »</a>
+            </div>
+        }
+    </div>
+}
 
-<ul>
-    @foreach (var item in Model)
-    {
-        <li>
-            <a asp-action="Details" asp-route-id="@item.Id">@item.Name</a>
-            -- @item.Personality (@item.Description)
-        </li>
-    }
-</ul>
-
-<hr />
-<a asp-action="Add">+ Summon a Silly Cat</a>
+<div style="margin-top:2rem;">
+    <a asp-action="Add" class="btn btn-primary" style="font-size:1.2rem; padding: 0.6rem 1.5rem !important;">
+        ⚡ SUMMON A SILLY CAT
+    </a>
+</div>

@@ -1,8 +1,43 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div style="text-align: center; padding: 3rem 1rem;">
+
+    <div style="font-size: 5rem; animation: wiggle 2s ease-in-out infinite; display:inline-block; filter: drop-shadow(5px 5px 0 #0D0D0D);">
+        🐱
+    </div>
+
+    <h1 style="font-size: 4rem; margin: 0.5rem 0; text-shadow: 4px 4px 0 #FF2020;">
+        SILLY CATS
+    </h1>
+
+    <div style="display: flex; justify-content: center; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+        <span class="action-word" style="transform: rotate(-3deg)">POW!</span>
+        <span class="action-word" style="background:#1A56FF; color:#fff; transform: rotate(1deg)">MEOW!</span>
+        <span class="action-word" style="background:#0D0D0D; color:#FFE600; transform: rotate(-1.5deg)">ZAP!</span>
+    </div>
+
+    <div class="speech-bubble" style="max-width: 520px; margin: 0 auto 2.5rem; text-align: left;">
+        <strong>Welcome to the most ridiculous cat catalog on the internet.</strong>
+        <br/>A curated collection of internet legends, feline disasters, and chronically unhinged creatures.
+    </div>
+
+    <a asp-controller="Catalog" asp-action="Index"
+       style="font-family:'Bangers',cursive; font-size:1.5rem; letter-spacing:3px;
+            background:#FF2020; color:#FFFBEE; border: 4px solid #0D0D0D;
+            padding: 0.7rem 2rem; box-shadow: 6px 6px 0 #0D0D0D;
+            display:inline-block; text-decoration:none;
+            transition: transform 0.1s, box-shadow 0.1s;"
+       onmouseover="this.style.transform='translate(-3px,-3px)'; this.style.boxShadow='9px 9px 0 #0D0D0D';"
+       onmouseout="this.style.transform=''; this.style.boxShadow='6px 6px 0 #0D0D0D';">
+        VIEW THE CATALOG →
+    </a>
 </div>
+
+<style>
+@@keyframes wiggle {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+}
+</style>

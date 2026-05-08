@@ -1,13 +1,36 @@
 ﻿@model SillyCats.Models.Item
 
-<h1>@Model.Name</h1>
+<div style="margin-bottom: 1.5rem;">
+    <a asp-action="Index" class="back-link">← BACK TO CATALOG</a>
+</div>
 
-<p><strong>Breed: </strong>@Model.Breed</p>
-<p><strong>Gender: </strong>@Model.Gender</p>
-<p><strong>Personality: </strong>@Model.Personality</p>
-<p><strong>Description: </strong>@Model.Description</p>
+<div class="comic-panel">
+    <div class="detail-header">
+        <div class="detail-cat-icon">🐱</div>
+        <div class="detail-info">
+            <div class="page-title-wrap" style="margin-bottom: 0.8rem;">
+                <h1 style="margin:0;">@Model.Name</h1>
+                <span class="burst">CAT #@Model.Id</span>
+            </div>
 
-<hr/>
-<a asp-action="Index">&larr; Return to the Catalog</a>
+            <div class="detail-row">
+                <span class="detail-label">BREED</span>
+                <span class="detail-value">@Model.Breed</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">GENDER</span>
+                <span class="detail-value">@Model.Gender</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">PERSONALITY</span>
+                <span class="detail-value">@Model.Personality</span>
+            </div>
+        </div>
+    </div>
 
-
+    <div class="description-panel" style="margin-top:2rem;">
+        <p style="margin: 1.2rem 0 0; font-size: 1.05rem; line-height: 1.7;">
+            @Model.Description
+        </p>
+    </div>
+</div>

@@ -1,26 +1,40 @@
 ﻿@model SillyCats.Models.Item
 
-<h1>Add a Silly Cat</h1>
+<div class="page-title-wrap">
+    <h1>Summon a Silly Cat</h1>
+    <span class="burst">NEW!</span>
+</div>
 
-<form asp-action="Add" method="post">
-    <div>
-        <label>Name</label>
-        <input asp-for="Name"/>
-    </div>
-    <div>
-        <label>Breed</label>
-        <input asp-for="Breed"/>
-    </div>
-    <div>
-        <label>Gender</label>
-        <input asp-for="Gender"/>
-    </div>
-    <div>
-        <label>Personality</label>
-        <input asp-for="Personality"/>
-    </div>
-    <div>
-        <label>Description</label>
-        <input asp-for="Description"/>
-    </div>
-</form>
+<div class="speech-bubble" style="margin-bottom: 2rem;">
+    <strong>Fill out the dossier below</strong> to add a new cat to the collection!
+</div>
+
+<div class="form-panel">
+    <form asp-action="Add" method="post">
+        <div class="form-group-comic">
+            <label asp-for="Name">CAT NAME</label>
+            <input asp-for="Name" placeholder="e.g. Lord Fluffington III"/>
+        </div>
+        <div class="form-group-comic">
+            <label asp-for="Breed">BREED</label>
+            <input asp-for="Breed" placeholder="e.g. Domestic Shorthair"/>
+        </div>
+        <div class="form-group-comic">
+            <label asp-for="Gender">GENDER</label>
+            <input asp-for="Gender" placeholder="e.g. Mysterious, Unknowable"/>
+        </div>
+        <div class="form-group-comic">
+            <label asp-for="Personality">PERSONALITY</label>
+            <input asp-for="Personality" placeholder="e.g. Chaotic Evil, Extremely Hungry"/>
+        </div>
+        <div class="form-group-comic">
+            <label asp-for="Description">DESCRIPTION / BIO</label>
+            <input asp-for="Description" placeholder="Tell us the cat's legendary tale..."/>
+        </div>
+
+        <div style="display:flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+            <button type="submit" class="btn btn-primary">⚡ ADD TO CATALOG</button>
+            <a asp-action="Index" class="back-link">✕ CANCEL</a>
+        </div>
+    </form>
+</div>
