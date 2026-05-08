@@ -54,5 +54,34 @@
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="~/js/site.js" asp-append-version="true"></script>
 @await RenderSectionAsync("Scripts", required: false)
+
+<audio id="bgMusic" loop>
+    <source src="/audio/Song.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicToggle" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; padding: 10px 20px; border-radius: 50px; background-color: #2b2b2b; color: #ffcc00; border: 3px solid #ffcc00; cursor: pointer; font-weight: bold; font-family: inherit; box-shadow: 4px 4px 0px #000; transition: transform 0.1s;">
+    Play cool ass music
+</button>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const music = document.getElementById('bgMusic');
+        const btn = document.getElementById('musicToggle');
+        let isPlaying = false;
+
+        btn.addEventListener('click', function() {
+            if (isPlaying) {
+                music.pause();
+                btn.innerText = "Cool ass music OFF";
+                btn.style.transform = "scale(1)"; 
+            } else {
+                music.play();
+                btn.innerText = "Cool ass music ON";
+                btn.style.transform = "scale(0.95)"; 
+            }
+            isPlaying = !isPlaying;
+        });
+    });
+</script>
 </body>
 </html>
