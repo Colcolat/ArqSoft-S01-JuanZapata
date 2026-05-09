@@ -92,7 +92,7 @@ dotnet run --project SillyCats
 
 **Juan Zapata** · TSU Software Engineering  
 Tecnológico de Software  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin&logoColor=white)](www.linkedin.com/in/juan-josé-zapata-buenfil)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/juan-jos%C3%A9-zapata-buenfil/)
 [![GitHub](https://img.shields.io/badge/GitHub-black?logo=github&logoColor=white)](https://github.com/Colcolat)
 
 ---
