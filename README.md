@@ -8,18 +8,7 @@ A simple ASP.NET Core MVC web application built as a first assignment for the **
 
 ##  Screenshots
 
-### Home
-![Home page](docs/screenshots/home.png)
-
-### Catalog
-![Catalog view](docs/screenshots/catalog.png)
-
-### Cat Details
-![Detail view](docs/screenshots/details.png)
-
-### Add a Cat
-![Add form](docs/screenshots/add.png)
-
+Are in the carpet named Docs
 ---
 
 ##  Tech Stack
