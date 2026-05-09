@@ -9,6 +9,7 @@ A simple ASP.NET Core MVC web application built as a first assignment for the **
 ##  Screenshots
 
 Are in the carpet named Docs
+
 ---
 
 ##  Tech Stack
