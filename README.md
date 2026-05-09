@@ -88,3 +88,4 @@ Tecnológico de Software
 ---
 
 *Arquitectura de Software — Q3 2026 · TSW*
+*Gemini was used for the creation of the Readme document and Claude was used for the frontend of the page*
